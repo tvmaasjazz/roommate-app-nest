@@ -1,0 +1,19 @@
+{
+  "name": "roommate-app-nest",
+  "version": "1.0.0",
+  "description": "Server for roommate-app ported to Nest.js",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvmaasjazz/roommate-app-nest.git"
+  },
+  "author": "Tyler Vander Maas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tvmaasjazz/roommate-app-nest/issues"
+  },
+  "homepage": "https://github.com/tvmaasjazz/roommate-app-nest#readme"
+}
