@@ -2,8 +2,9 @@
   "name": "roommate-app-nest",
   "version": "1.0.0",
   "description": "Server for roommate-app ported to Nest.js",
-  "main": "src/server.ts",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/tvmaasjazz/roommate-app-nest/issues"
   },
-  "homepage": "https://github.com/tvmaasjazz/roommate-app-nest#readme"
+  "homepage": "https://github.com/tvmaasjazz/roommate-app-nest#readme",
+  "dependencies": {
+    "@nestjs/common": "^4.4.2",
+    "@nestjs/core": "^4.4.2",
+    "@nestjs/microservices": "^4.4.1",
+    "@nestjs/testing": "^4.4.1",
+    "@nestjs/websockets": "^4.4.1",
+    "body-parser": "^1.18.2",
+    "mysql2": "^1.5.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.5.5",
+    "sequelize": "^4.27.0",
+    "sequelize-typescript": "^0.6.1",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.57",
+    "@types/sequelize": "^4.0.79",
+    "ts-node": "^3.3.0"
+  }
 }
