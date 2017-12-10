@@ -1,4 +1,4 @@
-import { Component, Inject } from '@nestjs/common';
+import { Component } from '@nestjs/common';
 import { Model } from 'sequelize-typescript';
 import { CreateHouseDto } from './dto/create-house.dto';
 import { House } from './house.entity';
