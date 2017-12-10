@@ -12,8 +12,8 @@ export class HousesController {
     await this.housesService.create(createHouseDto);
   }
 
-  @Get()
-  async findAll(): Promise<House[]> {
-    return await this.housesService.findAll();
+  @Get(':id')
+  async findHouseById(@Param() params): Promise<House> {
+    return await this.housesService.findHouseById(params.id);
   }
 }

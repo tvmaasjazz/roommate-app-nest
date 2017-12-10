@@ -13,7 +13,7 @@ export class HousesService {
     return await house.save();
   }
 
-  async findAll(): Promise<House[]> {
-    return await House.findAll<House>();
+  async findHouseById(id: string): Promise<House> {
+    return await House.findOne<House>({ where: { id } });
   }
 }
