@@ -5,10 +5,6 @@ import { House } from './house.entity';
 
 @Component()
 export class HousesService {
-  constructor(
-    @Inject('HousesRepository') private readonly housesRepository: typeof Model
-  ) {}
-
   async create(createHouseDto: CreateHouseDto): Promise<House> {
     const house = new House();
     house.name = createHouseDto.name;
@@ -17,8 +13,7 @@ export class HousesService {
     return await house.save();
   }
 
-  // problem with assigning abstract constructor type to a non-abstract constructor type
-  // async findAll(): Promise<House[]> {
-  //   return await this.housesRepository.findAll<House>();
-  // }
+  async findAll(): Promise<House[]> {
+    return await House.findAll<House>();
+  }
 }
