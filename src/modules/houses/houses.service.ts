@@ -17,7 +17,8 @@ export class HousesService {
     return await house.save();
   }
 
-  async findAll(): Promise<House[]> {
-    return await this.housesRepository.findAll<House>();
-  }
+  // problem with assigning abstract constructor type to a non-abstract constructor type
+  // async findAll(): Promise<House[]> {
+  //   return await this.housesRepository.findAll<House>();
+  // }
 }
