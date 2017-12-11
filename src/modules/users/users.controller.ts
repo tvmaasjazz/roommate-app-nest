@@ -5,25 +5,25 @@ import { User } from './user.entity';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersSetvice) {}
+  constructor(private readonly usersService: UsersService) {}
 
   @Get(':username')
   async findUserByUsername(@Param() params) {
-    return await usersService.findUserByUsername(params.username);
+    return await this.usersService.findUserByUsername(params.username);
   }
 
   @Post('addUser')
   async create(@Body() createUserDto: CreateUserDto) {
-    return await usersService.create(createUserDto);
+    return await this.usersService.create(createUserDto);
   }
 
   @Put(':id/updateProfile')
   async editUser(@Body() createUserDto: CreateUserDto, @Param() params) {
-    return await usersService.editUser(createUserDto, params.id);
+    return await this.usersService.editUser(createUserDto, params.id);
   }
 
   @Put(':id/joinHouse')
-  async joinHouse(@Param() params) {
-    return await usersService.joinHouse(params.id);
+  async joinHouse(@Body() body, @Param() params) {
+    return await this.usersService.joinHouse(body.key, params.id);
   }
 }
