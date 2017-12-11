@@ -25,8 +25,8 @@ export class UsersService {
   }
 
   // would want to inject houseService and have func that finds by key?
-  async joinHouse(key: string, id: string): Promise<House> {
-    const house = await House.findOne<House>({ where: { key } });
+  async joinHouse(id: string): Promise<House> {
+    const house = await House.findOne<House>({ where: { key: id } });
     await User.update({ houseId: house.id }, { where: { id } });
     return house;
   }
