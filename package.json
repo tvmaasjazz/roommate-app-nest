@@ -32,8 +32,12 @@
     "typescript": "^2.6.2"
   },
   "devDependencies": {
+    "@types/jest": "^21.1.8",
     "@types/node": "^8.0.57",
     "@types/sequelize": "^4.0.79",
+    "jest": "^21.2.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^21.2.4",
     "ts-node": "^3.3.0"
   }
 }
