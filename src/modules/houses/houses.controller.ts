@@ -9,7 +9,7 @@ export class HousesController {
 
   @Post()
   async create(@Body() createHouseDto: CreateHouseDto) {
-    await this.housesService.create(createHouseDto);
+    return await this.housesService.create(createHouseDto);
   }
 
   @Get(':id')
