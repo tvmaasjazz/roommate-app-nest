@@ -1,7 +1,13 @@
-import { Table, Column, Model } from 'sequelize-typescript';
+import { Table, Column, Model, PrimaryKey, AutoIncrement, ForeignKey, BelongsTo } from 'sequelize-typescript';
+import { House } from '../houses/house.entity';
 
 @Table
 export class User extends Model<User> {
+  @PrimaryKey
+  @AutoIncrement
+  @Column
+  id: number;
+
   @Column
   username: string;
 
@@ -16,4 +22,11 @@ export class User extends Model<User> {
 
   @Column
   imageUrl: string;
+
+  @ForeignKey(() => House)
+  @Column
+  houseId: number;
+
+  @BelongsTo(() => House)
+  house;
 }
