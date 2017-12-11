@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
 import { House } from '../houses/house.entity';
+import { User } from '../users/user.entity';
 
 export const databaseProviders = [
   {
@@ -13,9 +14,7 @@ export const databaseProviders = [
         password: '',
         database: 'roommate_app_nest',
       });
-      sequelize.addModels([House]);
-      // setup relationships here?
-      
+      sequelize.addModels([House, User]);
       await sequelize.sync();
       return sequelize;
     },
